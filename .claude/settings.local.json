@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(& .venv\\\\Scripts\\\\python.exe scripts\\\\_discover_calendar.py 2>&1 | Out-String -Width 200)",
+      "PowerShell(.venv\\\\Scripts\\\\python.exe scripts\\\\_verify_event.py)",
+      "PowerShell(Remove-Item *)",
+      "PowerShell(tail *)",
+      "PowerShell(cd \"C:\\\\Users\\\\daksh\\\\OneDrive\\\\Desktop\\\\Email_Agent\"; $env:PATH = \"C:\\\\Users\\\\daksh\\\\OneDrive\\\\Desktop\\\\Email_Agent\\\\.venv\\\\Scripts;\" + $env:PATH; python -m pytest -v 2>&1 | Select-Object -Last 40)",
+      "PowerShell(pip show *)",
+      "PowerShell(cd \"C:\\\\Users\\\\daksh\\\\OneDrive\\\\Desktop\\\\Email_Agent\"; $env:PATH = \".venv\\\\Scripts;\" + $env:PATH; python scripts/discover_send_tool.py 2>&1)"
+    ]
+  }
+}
